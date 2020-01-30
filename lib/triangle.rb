@@ -9,8 +9,9 @@ class Triangle
   
   def kind 
     triangle_array = [s1, s2, s3]
-    if triangle_array.any? { |s| s <= 0 } or triangle_array.sort.last > (triangle_array[0] + triangle_array[1])
+    if triangle_array.any? { |s| s <= 0 } 
       raise TriangleError
+    elsif triangle_array.sort.last >= (triangle_array[0] + triangle_array[1])
       
     elsif s1 == s2 and s1 == s3
       :equilateral
