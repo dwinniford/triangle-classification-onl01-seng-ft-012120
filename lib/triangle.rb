@@ -9,7 +9,9 @@ class Triangle
   
   def kind 
     if s1 == s2 and s1 == s3
-      :equilateral 
+      :equilateral
+    elsif !(s1 == s2) and s2 == s3
+      :isosceles
     end 
   end 
   
